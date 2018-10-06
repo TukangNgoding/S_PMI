@@ -18,7 +18,7 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-
+ <?php echo $this->session->flashdata('pesan')?>
 
 </div>
 <div class="job-overview">
@@ -31,14 +31,19 @@
 	  <div class="card card-outline-success mb-3">
           <div class="card-header bg-success">Permintaan Darah</div>
           <div class="card-block">
-            <form  action="<?php echo site_url();?>darah/proses_tambah_stok" method="POST" >
+
               <?php
               $i=0;
+              $id_permintaan=0;
+              $id_rs=0;
+              $id_pmi=0;
                foreach($permintaan as $permintaan){
+                 $id_permintaan=$permintaan->id_permintaan;
+                 $id_pmi=$permintaan->id_pmi;
+                 $id_rs=$permintaan->id_rs;
                $i++;
 
               ?>
-
               <div class="form-group row">
                   <label for="example-text-input" class="col-3 col-form-label">No Rekam Medis </label>
                   <div class="col-9">
@@ -75,40 +80,68 @@
                       <input class="form-control" type="number"  required name="jumlah" placeholder="Jumlah" value ="<?php echo $permintaan->jumlah?>" >
                   </div>
               </div>
-            <?php } ?>
 
-            </form>
+
+
 
           </div>
 
 
     </div>
-    <div class="card card-outline-success mb-3">
-          <div class="card-header bg-success">Kantung Darah</div>
+
+    <?php if($permintaan->verifikasi==null){?>
+    <div class="card card-outline-info mb-3">
+          <div class="card-header bg-info">Verifikasi Permintaan</div>
           <div class="card-block">
-            <form  action="<?php echo site_url();?>darah/proses_tambah_stok" method="POST" >
-              <?php
-              $i=0;
-               foreach($pesan  as $pesan){
-               $i++;
 
-              ?>
+                <p align="center">
+                  <a href="verifikasi?id=1&&id_permintaan=<?php echo $_GET['id']?>&&id_pmi=<?php echo $permintaan->id_pmi;?>&&id_rs=<?php echo $permintaan->id_rs;?>&&jumlah=<?php echo $permintaan->jumlah;?>"><button type="submit" class="btn btn-success btn-medium">Tersedia</button></a>
+                  <a href="verifikasi?id=2&&id_permintaan=<?php echo $_GET['id']?>"><button type="submit" class="btn btn-danger btn-medium">Tidak Tersedia</button></a>
+                </p>
 
-              <div class="form-group row">
-                  <label for="example-text-input" class="col-3 col-form-label">No Kantong Darah </label>
-                  <div class="col-9">
-                      <input class="form-control" type="text"  required name="no_rekam_medis" placeholder="No Kantong Darah">
-                  </div>
-              </div>
-
-            <?php } ?>
-                <p align="right"><button type="submit" class="btn btn-info btn-medium">Tambah</button></p>
-            </form>
 
           </div>
 
 
     </div>
+  <?php }else if($permintaan->verifikasi==1) {?>
+    <div class="card card-outline-info mb-3">
+          <div class="card-header bg-info">Data Kantong Darah</div>
+          <div class="card-block">
+
+
+                <?php
+                  $i=1;
+                  foreach($pesan as $pesan){
+                  ?>
+                  <form  action="<?php echo site_url();?>permintaan_darah/add_darah?id_pesan=<?php echo $pesan->id_pesan;?>&&id_permintaan=<?php echo $permintaan->id_permintaan;?>" method="POST" >
+                  <div class="form-group row">
+
+                      <label for="example-text-input" class="col-3 col-form-label">Kantong Darah <?php echo $i?></label>
+                      <div class="col-5">
+                        <select class="form-control" name="kantong_darah" required>
+                          <option value="">aaa</option>
+                        </select>
+
+                      </div>
+                      <div class="col-4">
+                          <button type="submit" class="btn btn-success btn-medium">Simpan</button>
+                      </div>
+
+                  </div>
+                  <hr>
+                  </form>
+                <?php $i++;
+                    }?>
+                <p align="center">
+                  <a href="verifikasi?id=1&&id_permintaan=<?php echo $_GET['id']?>"><button type="submit" class="btn btn-danger btn-medium">Finaslisasi</button></a>
+                </p>
+
+          </div>
+    </div>
+  <?php } ?>
+<?php } ?>
+
 </div>
 
 

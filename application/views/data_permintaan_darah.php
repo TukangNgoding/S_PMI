@@ -53,7 +53,7 @@
                         <th>GOl</th>
                         <th>Jumlah</th>
                         <th>verifikasi</th>
-                        <th>jumlah_verifikasi</th>
+                        
                         <th>Aksi</th>
                     </tr>
                 </thead>
@@ -73,7 +73,6 @@
                       <td><?php echo $data_permintaan->gol_darah?></td>
                       <td><?php echo $data_permintaan->jumlah?></td>
                       <td><?php echo $data_permintaan->verifikasi?></td>
-                      <td><?php echo $data_permintaan->jumlah_verifikasi?></td>
                       <td class="center"><a href="<?php echo site_url();?>pemesanan/detail_permintaan?id=<?php echo $data_permintaan->id_permintaan?>"><button type="button" class="btn btn-danger btn-xs">Aksi</button></td>
                   </tr>
                   <?php } ?>

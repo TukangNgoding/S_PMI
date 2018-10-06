@@ -38,6 +38,25 @@ class Pemesanan extends CI_Controller {
 			}
 
 		}
+	function verifikasi(){
+			$id=$_GET['id'];
+			$id_permintaan=$_GET['id_permintaan'];
+			$id_pmi=$_GET['id_pmi'];
+			$id_rs=$_GET['id_rs'];
+			$jumlah=$_GET['jumlah'];
+			$cek=$this->M_pemesanan->verifikasi($id,$id_permintaan,$id_pmi,$id_rs,$jumlah);
+
+			if($cek){
+				$data2="<script> alert('Verifikasi Berhasil')</script>";
+				$this->session->set_flashdata('pesan', $data2);
+				redirect('pemesanan/detail_permintaan?id='.$id_permintaan);
+			}else{
+				$data2="<script> alert('Verifikasi Berhasil')</script>";
+				$this->session->set_flashdata('pesan', $data2);
+				redirect('pemesanan/detail_permintaan?id='.$id_permintaan);
+			}
+
+		}
 		function proses_hapus_rs(){
 			$id=$_GET['id'];
 			$this->load->model('M_tambah_rs');
@@ -69,6 +88,7 @@ class Pemesanan extends CI_Controller {
 			$id=$_GET['id'];
 			$data['permintaan'] = $this->M_pemesanan->permintaan($id);
 			$data['pesan'] = $this->M_pemesanan->pesan($id);
+
 			$this->load->view('detail_permintaan',$data);
 		}
 

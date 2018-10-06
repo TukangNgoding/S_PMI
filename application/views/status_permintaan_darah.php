@@ -45,6 +45,7 @@
                 <thead>
                     <tr>
                         <th>NO</th>
+                        <th>PMI</th>
                         <th>No Rekam Medis</th>
                         <th>Nama Pasien</th>
                         <th>Nama Dokter</th>
@@ -52,7 +53,6 @@
                         <th>GOl</th>
                         <th>Jumlah</th>
                         <th>verifikasi</th>
-                        <th>jumlah_verifikasi</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -63,6 +63,7 @@
                   ?>
                   <tr>
                       <td><?php echo $i?></td>
+                      <td><?php echo $data_permintaan->nama?></td>
                       <td><?php echo $data_permintaan->no_rekam_medis?></td>
                       <td><?php echo $data_permintaan->nm_pasien?></td>
                       <td><?php echo $data_permintaan->nm_dokter?></td>
@@ -70,7 +71,7 @@
                       <td><?php echo $data_permintaan->gol_darah?></td>
                       <td><?php echo $data_permintaan->jumlah?></td>
                       <td><?php echo $data_permintaan->verifikasi?></td>
-                      <td><?php echo $data_permintaan->jumlah_verifikasi?></td>
+
 
                   </tr>
                   <?php } ?>
