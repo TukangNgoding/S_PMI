@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Skripsi</title>
+    <title>Stok Darah PMI</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,8 +30,8 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-  
-   
+
+
 </div>
 <div class="job-overview">
     <header class="job-overview__header">
@@ -72,20 +72,20 @@
                     </tr>
                 </thead>
                 <tbody>
-                                     <?php	
+                                     <?php
 											$j=0;
 											foreach($data_komponen1 as $data){
 											?>
                                     <tr class="odd gradeX">
                                         <td><?php echo ++$j?></td>
-                                        <td><?php echo $data->nama; ?></td>                                   
-										
+                                        <td><?php echo $data->nama; ?></td>
+
 										<td><a href="<?php echo base_url()?>edit_bidan?id_komponen=<?php echo $data->id_komponen?>"  ><button type="button" class="btn btn-success">Edit</button></a></td>
 										<?php
 										echo"<td class='center'><a href='". base_url()."komponen/proses_hapus_komponen?id=".$data->id_komponen."' onclick=\"return confirm('Apakah Anda Yakin Menghapus ?') \" title='Hapus'><button type='button' class='btn btn-danger'>Hapus</button></a>
 										</td>";
 										?>
-                                      
+
                                     </tr>
                                     <?php } ?>
                 </tbody>
@@ -142,7 +142,7 @@
             });
         });
     })(jQuery);
-	
+
 </script>
   <script src="<?php site_url(); ?>dist/table/vendor/metisMenu/metisMenu.min.js"></script>
 

@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Skripsi</title>
+      <title>Stok Darah PMI</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,16 +30,16 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-  
-   
+
+
 </div>
 <div class="job-overview">
     <header class="job-overview__header">
-       
+
     </header>
 	<br>
     <div class="container">
-	  
+
         <div class="row">
            <div class="container">
         <div class="row">
@@ -50,7 +50,7 @@
               $i=0;
               foreach($edit_pendonor as $data){
               $i++;
-            ?>    
+            ?>
          <form class="form-horizontal" action="login/proses_edit_pendonor?id=<?php echo $data->id_pendonor?>" method="POST">
         <h2 class="page-contact__form-heading">Tambah Pendonor</h2>
         <div class="row justify-content-center">
@@ -64,7 +64,7 @@
                     <input type="text" class="form-control" name='nama' value="<?php echo $edit->nama?>" placeholder="Nama Lengkap">
                 </div>
             </div>
-			<div class="col-lg-5">							 
+			<div class="col-lg-5">
 			<select class="form-control" aria-hidden="true" name='j_kelamin'>
 			<option value="<?php echo $edit->j_kelamin?>"></option>
             <option>Jenis Kelamin</option>
@@ -105,7 +105,7 @@
     </form>
 </div>
             </div>
-           
+
         </div>
     </div>
         </div>
@@ -150,7 +150,7 @@
             });
         });
     })(jQuery);
-	
+
 </script>
   <script src="<?php site_url(); ?>dist/table/vendor/metisMenu/metisMenu.min.js"></script>
 

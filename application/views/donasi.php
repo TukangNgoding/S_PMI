@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Skripsi</title>
+  <title>Stok Darah PMI</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,16 +30,16 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-  
-   
+
+
 </div>
 <div class="job-overview">
     <header class="job-overview__header">
-       
+
     </header>
 	<br>
     <div class="container">
-	  
+
         <div class="row">
            <div class="container">
         <div class="row">
@@ -60,14 +60,14 @@
 						8. Tidur malam minmal 5 jam <br>
 						9. Sudah sarapan atau makan<br>
 						10. Rhesus negatif tidak menjadi donor sukarela rutin <br>
-						11. Jarak penyumbangan minimal 60 hari(2 balan) 
+						11. Jarak penyumbangan minimal 60 hari(2 balan)
 
 					</p>
                     <footer></footer>
                 </blockquote>
             </div>
         </div>
-       
+
     </div>
     <div class="col-lg-6">
         <div class="card card-outline-primary mb-4">
@@ -75,10 +75,10 @@
             <div class="card-block">
                 <blockquote class="card-blockquote">
                     <p>
-					
+
                           1. Mengisi lembar donor daah yang telah disediakan oleh PMI
                         <br>
-                        
+
                           2. Pemeriksaan sebelum donasi (kadar Hemoglobin(Hb) dan Berat badan)
                       <br>
                           3. Pemeriksaan kesehatan secara umum (anamnesa dan tensi darah oleh dokter)
@@ -88,14 +88,14 @@
                           5. Identitas diri dari pendonor akan di catat pada setiap donasi
                         <br>
                           6. Setalah donasi darah akan disimpan dalam lemari pendingin (darah karantina)
-                        
+
 					</p>
                     <footer></footer>
                 </blockquote>
             </div>
         </div>
     </div>
-</div>     
+</div>
         </div>
     </div>
         </div>
@@ -140,7 +140,7 @@
             });
         });
     })(jQuery);
-	
+
 </script>
   <script src="<?php site_url(); ?>dist/table/vendor/metisMenu/metisMenu.min.js"></script>
 

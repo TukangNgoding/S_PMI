@@ -3,7 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Skripsi</title>
+    <title>Stok Darah PMI</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -30,16 +30,16 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-  
-   
+
+
 </div>
 <div class="job-overview">
     <header class="job-overview__header">
-       
+
     </header>
 	<br>
     <div class="container">
-	  
+
         <div class="row">
            <div class="container">
         <div class="row">
@@ -60,7 +60,7 @@
                 </div>
             </div>
 			<div class="col-lg-5">
-			 
+
 			<select class="form-control" aria-hidden="true" name='j_kelamin'>
             <option>Jenis Kelamin</option>
             <option>Laki-Laki</option>
@@ -68,7 +68,7 @@
 			</select>
 			</div>
             <div class="col-lg-5">
-			 
+
 			<select class="form-control" aria-hidden="true" name='gol_darah'>
             <option>Golongan Darah</option>
             <option>A+</option>
@@ -127,7 +127,7 @@
                     </tr>
                 </thead>
                 <tbody>
-                                   <?php	
+                                   <?php
 											$j=0;
 												foreach($data_pendonor as $data){
 											?>
@@ -136,14 +136,14 @@
                                         <td><?php echo $data->nama; ?></td>
                                         <td><?php echo $data->j_kelamin; ?></td>
                                         <td><?php echo $data->no_hp; ?></td>
-                                        <td><?php echo $data->gol_darah; ?></td>                                     
-                                        <td><?php echo $data->alamat; ?></td>                                     
-										
+                                        <td><?php echo $data->gol_darah; ?></td>
+                                        <td><?php echo $data->alamat; ?></td>
+
 										<td><a href="<?php echo base_url()?>edit_pendonor?id_pendonor=<?php echo $data->id_pendonor?>"  ><button type="button" class="btn btn-success">Edit</button></a></td><?php
 										echo"<td class='center'><a href='". base_url()."login/proses_hapus_pendonor?=id".$data->id_pendonor."' onclick=\"return confirm('Apakah Anda Yakin Menghapus ?') \" title='Hapus'><button type='button' class='btn btn-danger'>Hapus</button></a>
 										</td>";
 										?>
-                                      
+
                                     </tr>
                                     <?php } ?>
                 </tbody>
@@ -153,7 +153,7 @@
       </div>
 </div>
             </div>
-           
+
         </div>
     </div>
         </div>
@@ -198,7 +198,7 @@
             });
         });
     })(jQuery);
-	
+
 </script>
   <script src="<?php site_url(); ?>dist/table/vendor/metisMenu/metisMenu.min.js"></script>
 
