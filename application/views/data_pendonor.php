@@ -3,8 +3,7 @@
 <!-- BEGIN HEAD -->
 <head>
     <meta charset="UTF-8">
-    <title>Skripsi</title>
-
+    <title>Stok Darah PMI</title>
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -30,8 +29,8 @@
 <?php echo $this->load->view('share/menu', '', TRUE);?>
 
 <div class="header-default">
-  
-   
+
+
 </div>
 <div class="job-overview">
 	<header class="job-overview__header">
@@ -58,13 +57,13 @@
                     </tr>
                 </thead>
                 <tbody>
-                
+
                     <tr>
                         <td>1</td>
                         <td>YYYY</td>
                         <td>YYYY</td>
                         <td>YYYY</td>
-                        <td>YYYY</td>          
+                        <td>YYYY</td>
                     </tr>
 
                 </tbody>
@@ -121,7 +120,7 @@
             });
         });
     })(jQuery);
-	
+
 </script>
   <script src="<?php site_url(); ?>dist/table/vendor/metisMenu/metisMenu.min.js"></script>
 
