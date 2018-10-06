@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <t <title>Skripsi</title>
+      <title>Stok Darah PMI</title>
 
     <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -23,8 +23,8 @@
 <div class="header-master">
     <div class="header-topbar">
         <div class="container">
-         
-       
+
+
         </div>
     </div>
     <div id="header-menu" class="header-master__menu">
@@ -37,7 +37,7 @@
                 </button>
                 <a class="navbar-brand" href="index.html">Direct<span class="colored">o</span>ry</a>
                 <div id="header-master-menu" class="collapse navbar-collapse">
-                   
+
             </nav>
         </div>
     </div>
